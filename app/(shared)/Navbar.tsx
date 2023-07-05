@@ -9,20 +9,21 @@ const Navbar = (props: Props) => {
   return (
     <header className="mb-5">
       <nav className="flex justify-between items-center w-full bg-wh-900 text-wh-10 px-10 py-4">
+        <div>
+          <p className="font-bold text-xl">Dean Walton</p>
+        </div>
         <div className="hidden sm:block">
           <SocialLinks />
-        </div>
-        <div>
-          <p>something here</p>
         </div>
         <div className="flex justify-between items-center gap-10">
           <Link href="/">Home</Link>
           <Link href="/">About</Link>
           <Link href="/">Projects</Link>
+          <Link href="/">Contacts</Link>
         </div>
       </nav>
       <div className="flex justify-between gap-8 mt-5 mb-4 mx-10">
-        <div className="basis-2/3 md:mt-3">
+        <div className="flex items-center justify-center flex-col basis-2/3 md:mt-3">
           <h1 className="font-bold text-3xl md:text-5xl">
             portfolio of the future
           </h1>

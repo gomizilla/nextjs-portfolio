@@ -14,14 +14,14 @@ const Footer = () => {
           <p>© Copyright dood</p>
         </div>
         {/* second column */}
-        <div className="mt-16 basis-1/2 sm:mt-0">
+        <div className="mt-16 basis-1/4 sm:mt-0">
           <h4 className="font-bold">Linkage</h4>
           <p className="my-5">Path of Exile 2.0 when</p>
           <p className="my-5">GGG Pls</p>
           <p>gib</p>
         </div>
         {/* third column */}
-        <div className="mt-16 basis-1/2 sm:mt-0">
+        <div className="mt-16 basis-1/4 sm:mt-0">
           <h4 className="font-bold">Ejecto Seato Cuz</h4>
           <p className="my-5">contact bracket?</p>
           <p>halp</p>
