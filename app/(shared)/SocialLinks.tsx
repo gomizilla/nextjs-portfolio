@@ -5,6 +5,8 @@ import Facebook from "/public/assets/social_facebook.png";
 import Instagram from "/public/assets/social_instagram.png";
 import Google from "/public/assets/social_google.png";
 import Discord from "/public/assets/social_discord.png";
+import LinkedIn from "/public/assets/social_linkedin.png";
+import Github from "/public/assets/social_github.png";
 
 type Props = {
   isDark?: boolean;
@@ -17,21 +19,21 @@ const SocialLinks = ({ isDark = false }: Props) => {
         <Image
           className={`${isDark ? "brightness-0" : ""} hover:opacity-50`}
           alt="twitter"
-          src={Twitter}
-          width={20}
-          height={20}
+          src={LinkedIn}
+          width={25}
+          height={25}
         />
       </a>
       <a href="https://facebook.com" target="_blank" rel="noreferrer">
         <Image
           className={`${isDark ? "brightness-0" : ""} hover:opacity-50`}
           alt="facebook"
-          src={Facebook}
-          width={20}
-          height={20}
+          src={Github}
+          width={25}
+          height={25}
         />
       </a>
-      <a href="https://instagram.com" target="_blank" rel="noreferrer">
+      {/* <a href="https://instagram.com" target="_blank" rel="noreferrer">
         <Image
           className={`${isDark ? "brightness-0" : ""} hover:opacity-50`}
           alt="instagram"
@@ -57,7 +59,7 @@ const SocialLinks = ({ isDark = false }: Props) => {
           width={20}
           height={20}
         />
-      </a>
+      </a> */}
     </div>
   );
 };

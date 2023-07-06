@@ -6,6 +6,9 @@ type Props = {
   imageHeight: string;
   isSmallCard?: boolean;
   isLongForm?: boolean;
+  title?: string;
+  image?: string;
+  description?: string;
 };
 
 const Card = ({
@@ -13,6 +16,9 @@ const Card = ({
   imageHeight,
   isSmallCard = false,
   isLongForm = false,
+  title,
+  image,
+  description,
 }: Props) => {
   return (
     <div className={className}>
@@ -26,7 +32,7 @@ const Card = ({
             ${isSmallCard ? "text-base" : "text-lg"}
         `}
           >
-            title
+            {title}
           </h4>
         </Link>
         <div className={`${isSmallCard ? "my-2" : "flex my-3"} gap-3`}>
@@ -37,7 +43,7 @@ const Card = ({
             isLongForm ? "line-clamp-5" : "line-clamp-3"
           }`}
         >
-          snippet
+          {description}
         </p>
       </div>
     </div>

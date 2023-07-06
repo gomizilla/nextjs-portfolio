@@ -50,7 +50,7 @@ type Props = {};
 
 const Projects = (props: Props) => {
   return (
-    <section className="">
+    <section id="projects">
       <hr className="border-1" />
       <div className="flex items-center gap-3 my-8">
         <h1 className="font-bold text-3xl md:text-5xl">Projects</h1>
@@ -88,21 +88,29 @@ const Projects = (props: Props) => {
           className="bg-wh-500 col-span-1 row-span-3"
           imageHeight="h-56"
           isLongForm={true}
+          title="project 1"
+          description="description 1"
         ></Card>
         <Card
           className="bg-wh-500 col-span-1 row-span-3 mt-10 sm:mt-0"
           imageHeight="h-56"
           isLongForm={true}
+          title="project 2"
+          description="description 2"
         ></Card>
         <Card
           className="bg-wh-500 col-span-1 row-span-3 mt-10 sm:mt-0"
           imageHeight="h-56"
           isLongForm={true}
+          title="project 3"
+          description="description 3"
         ></Card>
         <Card
           className="bg-wh-500 col-span-1 row-span-3 mt-10 sm:mt-0"
           imageHeight="h-56"
           isLongForm={true}
+          title="project 4"
+          description="description 4"
         ></Card>
         {/* <div className="bg-wh-500 col-span-2 row-span-1">asdf</div> */}
         {/* </div> */}

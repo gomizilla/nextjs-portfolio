@@ -5,9 +5,15 @@ type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <section className="mt-10">
+    <section className="mt-10" id="contacts">
       <hr className="border-1" />
-      <div className="sm:grid grid-cols-2">
+      <div className="sm:grid grid-cols-2 gap-8">
+        <div className="col-span-1">
+          <div className="basis-full relative w-auto h-96 bg-wh-500">
+            {/* <Image  /> */}
+            Image here
+          </div>
+        </div>
         <div className="col-span-1">
           <div className="gap-3 mt-8 mb-3">
             <h1 className="font-bold text-3xl md:text-5xl">Contacts</h1>
@@ -16,7 +22,7 @@ const Contact = (props: Props) => {
             Write me an email at: email@email.com
             {/* <p> */}
             <span className="flex justify-start gap-5">
-              Or reach me via <SocialLinks isDark />
+              Or reach me via <SocialLinks />
             </span>
             {/* </p> */}
           </div>
@@ -25,12 +31,6 @@ const Contact = (props: Props) => {
           {/* <SocialLinks isDark /> */}
           {/* </div> */}
           {/* </div> */}
-        </div>
-        <div className="col-span-1">
-          <div className="basis-full relative w-auto h-96 bg-wh-500">
-            {/* <Image  /> */}
-            Image here
-          </div>
         </div>
       </div>
     </section>

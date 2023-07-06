@@ -16,18 +16,18 @@ const Navbar = (props: Props) => {
           <SocialLinks />
         </div>
         <div className="flex justify-between items-center gap-10">
-          <Link href="/">Home</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Projects</Link>
-          <Link href="/">Contacts</Link>
+          {/* <Link href="/">Home</Link> */}
+          <Link href="#about-me">About</Link>
+          <Link href="#projects">Projects</Link>
+          <Link href="#footer">Contacts</Link>
         </div>
       </nav>
-      <div className="flex justify-between gap-8 mt-5 mb-4 mx-10">
+      <div className="sm:flex justify-between gap-8 mt-5 mb-4 mx-10">
         <div className="flex items-center justify-center flex-col basis-2/3 md:mt-3">
           <h1 className="font-bold text-3xl md:text-5xl">
             portfolio of the future
           </h1>
-          <p className="text-sm mt-3">
+          <p className="text-sm mt-3 mb-3">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Reprehenderit, voluptatum!
           </p>
