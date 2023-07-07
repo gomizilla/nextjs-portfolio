@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-wh-900 text-wh-50 p-10" id="footer">
+    <footer className="bg-wh-900 text-wh-50 p-10" id="contacts">
       <div className="justify-between mx-auto gap-16 sm:flex">
         {/* first column */}
         <div className="mt-16 basis-1/2 sm:mt-0">
@@ -18,15 +18,15 @@ const Footer = () => {
         {/* second column */}
         <div className="mt-16 basis-1/4 sm:mt-0">
           <h4 className="font-bold">Navigation</h4>
-          <p className="my-5">
-            <Link href="/">Home</Link>
-          </p>
-          <p className="my-5">
+          <div className="my-5">
+            <Link href="#top">Back to Top</Link>
+          </div>
+          <div className="my-5">
             <Link href="#about-me">About</Link>
-          </p>
-          <p>
+          </div>
+          <div>
             <Link href="#projects">Projects</Link>
-          </p>
+          </div>
           {/* <p className="my-5">Path of Exile 2.0 when</p> */}
           {/* <p className="my-5">GGG Pls</p> */}
           {/* <p>gib</p> */}
@@ -35,9 +35,9 @@ const Footer = () => {
         <div className="mt-16 basis-1/4 sm:mt-0">
           <h4 className="font-bold">Contact</h4>
           <p className="my-5">email@email.com</p>
-          <p className="flex justify-start">
+          <div className="flex justify-start">
             <SocialLinks />
-          </p>
+          </div>
         </div>
       </div>
     </footer>

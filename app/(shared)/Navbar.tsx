@@ -7,7 +7,7 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   return (
-    <header className="mb-5">
+    <header className="mb-5" id="top">
       <nav className="flex justify-between items-center w-full bg-wh-900 text-wh-10 px-10 py-4">
         <div>
           <p className="font-bold text-xl">Dean Walton</p>
@@ -19,7 +19,7 @@ const Navbar = (props: Props) => {
           {/* <Link href="/">Home</Link> */}
           <Link href="#about-me">About</Link>
           <Link href="#projects">Projects</Link>
-          <Link href="#footer">Contacts</Link>
+          <Link href="#contacts">Contacts</Link>
         </div>
       </nav>
       <div className="sm:flex justify-between gap-8 mt-5 mb-4 mx-10">

@@ -5,7 +5,7 @@ type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <section className="mt-10" id="contacts">
+    <section className="mt-10">
       <hr className="border-1" />
       <div className="sm:grid grid-cols-2 gap-8">
         <div className="col-span-1">
