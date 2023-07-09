@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Card from "../(shared)/Card";
+import SneakySnake from "/public/assets/project_sneakysnake.png";
+import TangoAtsumare from "/public/assets/project_tangoatsumare.webp";
+import WordScramble from "/public/assets/project_wordscramble.png";
 
 // type TrendingCardProps = {
 //   className?: string;
@@ -42,11 +45,50 @@ import Card from "../(shared)/Card";
 //   );
 // };
 
-type ProjectCardProps = {};
+// type ProjectCardProps = {};
 
-const ProjectCard = ({}: ProjectCardProps) => {};
+// const ProjectCard = ({}: ProjectCardProps) => {};
 
 type Props = {};
+
+type Test = {
+  title?: string;
+  image?: any;
+  description?: string;
+  mainLink?: string;
+  demoLink?: string;
+};
+
+const projectTest: Array<Test> = [
+  {
+    title: "test1",
+    image: TangoAtsumare,
+    description: "test1",
+    mainLink: "https://github.com/tangoatsumare/tangoatsumare-readme",
+    demoLink: "https://www.youtube.com/watch?v=PSH1h7tCUjM",
+  },
+  {
+    title: "test2",
+    image: WordScramble,
+    description: "test2",
+    mainLink: "https://github.com/gomizilla/Deans-English-Games",
+    demoLink: "https://deans-english-games.vercel.app/",
+  },
+  {
+    title: "test3",
+    image: SneakySnake,
+    description: "test3",
+    mainLink: "https://github.com/gomizilla/Sneaky-Snake",
+    demoLink: "https://github.com/gomizilla/Sneaky-Snake",
+  },
+  {
+    title: "test4",
+    // image: "test4",
+    description: "test4",
+    mainLink: "",
+    demoLink: "",
+  },
+];
 
 const Projects = (props: Props) => {
   return (
@@ -82,9 +124,23 @@ const Projects = (props: Props) => {
 
       {/* <div className="grid grid-cols-2 grid-rows-2 gap-x-8 gap-y-8 my-5 border-2 border-orange-400"> */}
       {/* <div className="flex flex-col gap-y-8 my-5 border-2 border-orange-800"> */}
-      <div className="sm:grid grid-cols-2 grid-rows-2 gap-x-8 gap-y-8 my-5 border-2 border-red-700">
+      <div className="grid sm:grid-cols-2 sm:grid-rows-2 gap-x-8 gap-y-8 my-5">
         {/* large card */}
-        <Card
+        {projectTest.map((project: Test, index) => (
+          <Card
+            key={`${project.title}-${index}`}
+            className="bg-wh-500 col-span-1 row-span-3"
+            imageHeight="h-56"
+            isLongForm={true}
+            // isSmallCard
+            title={project.title}
+            image={project.image}
+            mainLink={project.mainLink}
+            demoLink={project.demoLink}
+            description={project.description}
+          />
+        ))}
+        {/* <Card
           className="bg-wh-500 col-span-1 row-span-3"
           imageHeight="h-56"
           isLongForm={true}
@@ -111,7 +167,7 @@ const Projects = (props: Props) => {
           isLongForm={true}
           title="project 4"
           description="description 4"
-        ></Card>
+        ></Card> */}
         {/* <div className="bg-wh-500 col-span-2 row-span-1">asdf</div> */}
         {/* </div> */}
         {/* </div> */}

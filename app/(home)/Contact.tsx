@@ -7,7 +7,7 @@ const Contact = (props: Props) => {
   return (
     <section className="mt-10">
       <hr className="border-1" />
-      <div className="sm:grid grid-cols-2 gap-8">
+      <div className="sm:grid grid-cols-2 gap-8 pt-10">
         <div className="col-span-1">
           <div className="basis-full relative w-auto h-96 bg-wh-500">
             {/* <Image  /> */}

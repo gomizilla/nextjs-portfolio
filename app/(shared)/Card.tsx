@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -7,7 +8,9 @@ type Props = {
   isSmallCard?: boolean;
   isLongForm?: boolean;
   title?: string;
-  image?: string;
+  image?: any;
+  mainLink?: string;
+  demoLink?: string;
   description?: string;
 };
 
@@ -18,15 +21,35 @@ const Card = ({
   isLongForm = false,
   title,
   image,
+  mainLink,
+  demoLink,
   description,
 }: Props) => {
   return (
     <div className={className}>
-      <Link className="basis-full hover:opacity-70" href="/">
-        <div className={`relative w-auto mb-3 ${imageHeight}`}>image</div>
+      <Link
+        className="basis-full hover:opacity-70"
+        href={`${mainLink}`}
+        target="_blank"
+      >
+        <div
+          className={`relative w-auto mb-3 ${imageHeight} border-2 border-green-500`}
+        >
+          <Image
+            fill
+            alt="temp"
+            // placeholder="blur"
+            src={image}
+            sizes="(max-width: 480px) 100vw,
+                (max-width: 768px) 75vw,
+                (max-width: 1060px) 50vw,
+                33vw"
+            style={{ objectFit: "contain" }}
+          />
+        </div>
       </Link>
       <div className="basis-full">
-        <Link href="/">
+        <Link href={`${demoLink}`} target="_blank">
           <h4
             className={`font-bold hover:text-accent-green
             ${isSmallCard ? "text-base" : "text-lg"}
