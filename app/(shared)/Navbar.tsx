@@ -17,9 +17,15 @@ const Navbar = (props: Props) => {
         </div>
         <div className="flex justify-between items-center gap-10">
           {/* <Link href="/">Home</Link> */}
-          <Link href="#about-me">About</Link>
-          <Link href="#projects">Projects</Link>
-          <Link href="#contacts">Contacts</Link>
+          <Link className="hover:text-accent-green" href="#about-me">
+            About
+          </Link>
+          <Link className="hover:text-accent-green" href="#projects">
+            Projects
+          </Link>
+          <Link className="hover:text-accent-green" href="#contacts">
+            Contacts
+          </Link>
         </div>
       </nav>
       <div className="sm:flex justify-between gap-8 mt-5 mb-4 mx-10">

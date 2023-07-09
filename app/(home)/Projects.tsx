@@ -61,23 +61,25 @@ type Test = {
 
 const projectTest: Array<Test> = [
   {
-    title: "test1",
+    title: "Tango Atsumare",
     image: TangoAtsumare,
-    description: "test1",
+    description:
+      "Tango Atsumare helps users expand their vocabulary by making the process of creating high quality flashcards easier and more fun than ever before.",
     mainLink: "https://github.com/tangoatsumare/tangoatsumare-readme",
     demoLink: "https://www.youtube.com/watch?v=PSH1h7tCUjM",
   },
   {
-    title: "test2",
+    title: "Dean's English Games",
     image: WordScramble,
-    description: "test2",
+    description:
+      "This project was made for Japanese junior high school students who have a hard time learning English. Through simple gamification, it helps students retain English vocabulary they encounter in school.",
     mainLink: "https://github.com/gomizilla/Deans-English-Games",
     demoLink: "https://deans-english-games.vercel.app/",
   },
   {
-    title: "test3",
+    title: "Sneaky Snake",
     image: SneakySnake,
-    description: "test3",
+    description: "A simple game made to learn Java.",
     mainLink: "https://github.com/gomizilla/Sneaky-Snake",
     demoLink: "https://github.com/gomizilla/Sneaky-Snake",
   },
@@ -129,9 +131,9 @@ const Projects = (props: Props) => {
         {projectTest.map((project: Test, index) => (
           <Card
             key={`${project.title}-${index}`}
-            className="bg-wh-500 col-span-1 row-span-3"
+            className="col-span-1 row-span-3"
             imageHeight="h-56"
-            isLongForm={true}
+            // isLongForm={true}
             // isSmallCard
             title={project.title}
             image={project.image}

@@ -13,4 +13,5 @@ body,
 
 html {
   scroll-behavior: smooth !important;
+  background-color: #f4f4f4;
 }
