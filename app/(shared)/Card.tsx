@@ -1,6 +1,12 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+const childVariant = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1 },
+};
 
 type Props = {
   className?: string;
@@ -28,7 +34,7 @@ const Card = ({
   description,
 }: Props) => {
   return (
-    <div className={className}>
+    <motion.div className={className} variants={childVariant}>
       <Link
         className="basis-full hover:opacity-70"
         href={`${mainLink}`}
@@ -74,7 +80,7 @@ const Card = ({
           {description}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

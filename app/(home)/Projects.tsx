@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -5,6 +6,7 @@ import Card from "../(shared)/Card";
 import SneakySnake from "/public/assets/project_sneakysnake.png";
 import TangoAtsumare from "/public/assets/project_tangoatsumare.webp";
 import WordScramble from "/public/assets/project_wordscramble.png";
+import { motion } from "framer-motion";
 
 // type TrendingCardProps = {
 //   className?: string;
@@ -49,6 +51,13 @@ import WordScramble from "/public/assets/project_wordscramble.png";
 
 // const ProjectCard = ({}: ProjectCardProps) => {};
 
+const container = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.3 },
+  },
+};
+
 type Props = {};
 
 type ProjectListProps = {
@@ -62,6 +71,15 @@ type ProjectListProps = {
 
 const projectList: Array<ProjectListProps> = [
   {
+    title: "Dean's English Games",
+    image: WordScramble,
+    description:
+      "This project was made for Japanese junior high school students who have a hard time learning English. Through simple gamification, it helps students retain English vocabulary they encounter in school.",
+    techStack: "JavaScript | React | MaterialUI",
+    mainLink: "https://github.com/gomizilla/Deans-English-Games",
+    demoLink: "https://deans-english-games.vercel.app/",
+  },
+  {
     title: "Tango Atsumare",
     image: TangoAtsumare,
     description:
@@ -70,15 +88,6 @@ const projectList: Array<ProjectListProps> = [
       "TypeScript | React Native | NodeJS | ExpressJS | MongoDB | Firebase",
     mainLink: "https://github.com/tangoatsumare/tangoatsumare-readme",
     demoLink: "https://www.youtube.com/watch?v=PSH1h7tCUjM",
-  },
-  {
-    title: "Dean's English Games",
-    image: WordScramble,
-    description:
-      "This project was made for Japanese junior high school students who have a hard time learning English. Through simple gamification, it helps students retain English vocabulary they encounter in school.",
-    techStack: "JavaScript | React | MaterialUI",
-    mainLink: "https://github.com/gomizilla/Deans-English-Games",
-    demoLink: "https://deans-english-games.vercel.app/",
   },
   {
     title: "Sneaky Snake",
@@ -131,7 +140,13 @@ const Projects = (props: Props) => {
 
       {/* <div className="grid grid-cols-2 grid-rows-2 gap-x-8 gap-y-8 my-5 border-2 border-orange-400"> */}
       {/* <div className="flex flex-col gap-y-8 my-5 border-2 border-orange-800"> */}
-      <div className="grid sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-1 gap-x-8 gap-y-8 my-5">
+      <motion.div
+        className="grid sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-1 gap-x-8 gap-y-8 my-5"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        variants={container}
+      >
         {/* large card */}
         {projectList.map((project: ProjectListProps, index) => (
           <Card
@@ -179,7 +194,7 @@ const Projects = (props: Props) => {
         {/* <div className="bg-wh-500 col-span-2 row-span-1">asdf</div> */}
         {/* </div> */}
         {/* </div> */}
-      </div>
+      </motion.div>
     </section>
   );
 };

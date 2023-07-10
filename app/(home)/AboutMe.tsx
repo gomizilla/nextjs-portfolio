@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import JSImage from "/public/assets/skills_javascript.svg";
@@ -12,6 +13,7 @@ import ExpressImage from "/public/assets/skills_express.svg";
 import GitImage from "/public/assets/skills_git.svg";
 import GithubImage from "/public/assets/skills_github.svg";
 import PostgreSQLImage from "/public/assets/skills_postgresql.svg";
+import { motion } from "framer-motion";
 
 const skillImages = [
   {
@@ -105,33 +107,44 @@ const AboutMe = (props: Props) => {
             <h1>Skills</h1>
           </div>
         </div>
-        <div className="col-span-2 row-span-3">
-          <div className="grid grid-cols-3 grid-rows-4 h-full gap-2 pt-5 sm:pt-0">
-            {skillImages.map((img, index) => (
-              // <div key={index}>
-              <div
-                key={index}
-                className="flex justify-center flex-col items-center"
-              >
-                <Image
-                  key={`${img.name}-${index}`}
-                  // fill
-                  alt={img.name}
-                  // placeholder="blur"
-                  src={img.image}
-                  height={40}
-                  width={55}
-                  // sizes="(max-width: 480px) 100vw,
-                  //       (max-width: 768px) 75vw,
-                  //       (max-width: 1060px) 50vw,
-                  //       33vw"
-                  style={{ objectFit: "cover" }}
-                />
-                {img.name}
-              </div>
-              // </div>
-            ))}
-            {/* <div className="col-span-1 row-span-1 bg-green-700">img</div>
+        <motion.div className="col-span-2 row-span-3">
+          <motion.div
+            // className="mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: 50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
+            <div className="grid grid-cols-3 grid-rows-4 h-full gap-2 pt-5 sm:pt-0">
+              {skillImages.map((img, index) => (
+                // <div key={index}>
+                <div
+                  key={index}
+                  className="flex justify-center flex-col items-center"
+                >
+                  <Image
+                    key={`${img.name}-${index}`}
+                    // fill
+                    alt={img.name}
+                    // placeholder="blur"
+                    src={img.image}
+                    height={40}
+                    width={55}
+                    // sizes="(max-width: 480px) 100vw,
+                    //       (max-width: 768px) 75vw,
+                    //       (max-width: 1060px) 50vw,
+                    //       33vw"
+                    style={{ objectFit: "cover" }}
+                  />
+                  {img.name}
+                </div>
+                // </div>
+              ))}
+              {/* <div className="col-span-1 row-span-1 bg-green-700">img</div>
             <div className="col-span-1 row-span-1 bg-green-700">img</div>
             <div className="col-span-1 row-span-1 bg-green-700">img</div>
             <div className="col-span-1 row-span-1 bg-green-700">img</div>
@@ -143,8 +156,9 @@ const AboutMe = (props: Props) => {
             <div className="col-span-1 row-span-1 bg-green-700">img</div>
             <div className="col-span-1 row-span-1 bg-green-700">img</div>
             <div className="col-span-1 row-span-1 bg-green-700">img</div> */}
-          </div>
-        </div>
+            </div>
+          </motion.div>
+        </motion.div>
         {/* <div className="col-span-1 row-span-1 bg-wh-500"></div> */}
       </div>
     </section>
