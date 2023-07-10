@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import SocialLinks from "./SocialLinks";
 import { motion } from "framer-motion";
+import SelfPicture from "public/assets/dean_pic_full.jpg";
 
 type Props = {};
 
@@ -30,10 +31,10 @@ const Navbar = (props: Props) => {
           </Link>
         </div>
       </nav>
-      <motion.div className="sm:flex justify-between items-center gap-8 mt-5 mb-4 mx-10 border-2 border-green-500">
-        <div className="flex items-center justify-center flex-col basis-2/3 md:mt-3 border-2 border-red-500">
+      <motion.div className="sm:flex justify-between items-center gap-8 mt-5 mb-4 mx-10">
+        <div className="flex items-center justify-center flex-col basis-full md:mt-3">
           <motion.div
-            className="border-2 border-yellow-500"
+            // className="border-2 border-yellow-500"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -54,9 +55,17 @@ const Navbar = (props: Props) => {
             Reprehenderit, voluptatum!
           </p> */}
         </div>
-        <div className="basis-full relative w-auto h-[400px] bg-wh-500">
-          {/* <Image  /> */}
-          Image here
+        <div className="sm:basis-full relative w-auto h-[400px] rounded-3xl border-8 border-slate-500 bg-wh-500">
+          <Image
+            fill
+            alt="dean-picture"
+            src={SelfPicture}
+            sizes="(max-width: 480px) 100vw,
+              (max-width: 768px) 75vw,
+              (max-width: 1060px) 50vw,
+              33vw"
+            style={{ objectFit: "contain" }}
+          />
         </div>
       </motion.div>
       <hr className="border-1 mx-10" />

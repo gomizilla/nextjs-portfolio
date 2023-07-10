@@ -119,7 +119,7 @@ const AboutMe = (props: Props) => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <div className="grid grid-cols-3 grid-rows-4 h-full gap-2 pt-5 sm:pt-0">
+            <div className="grid grid-cols-3 grid-rows-4 h-full gap-2 pt-5 mt-10 sm:pt-0">
               {skillImages.map((img, index) => (
                 // <div key={index}>
                 <div

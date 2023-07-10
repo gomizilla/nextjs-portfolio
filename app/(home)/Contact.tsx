@@ -1,5 +1,7 @@
 import React from "react";
 import SocialLinks from "../(shared)/SocialLinks";
+import Image from "next/image";
+import NorthShoreBeach from "public/assets/extra_beach.jpg";
 
 type Props = {};
 
@@ -10,8 +12,16 @@ const Contact = (props: Props) => {
       <div className="sm:grid grid-cols-2 gap-8 pt-10">
         <div className="col-span-1">
           <div className="basis-full relative w-auto h-96 bg-wh-500">
-            {/* <Image  /> */}
-            Image here
+            <Image
+              fill
+              alt="waikiki-beach"
+              src={NorthShoreBeach}
+              sizes="(max-width: 480px) 100vw,
+              (max-width: 768px) 75vw,
+              (max-width: 1060px) 50vw,
+              33vw"
+              style={{ objectFit: "cover" }}
+            />
           </div>
         </div>
         <div className="col-span-1">
