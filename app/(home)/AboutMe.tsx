@@ -82,7 +82,17 @@ const AboutMe = (props: Props) => {
         <h1 className="font-bold text-3xl md:text-5xl">About Me</h1>
       </div>
       <div className="sm:grid gap-5 grid-cols-4 grid-rows-4 sm:h-[500px] my-3">
-        <div className="col-span-2 row-span-4 text-xl sm:text-2xl rounded-xl bg-accent-orange">
+        <motion.div
+          className="col-span-2 row-span-4 text-xl sm:text-2xl rounded-xl bg-accent-orange"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           {/* <div className="flex justify-evenly items-center flex-col h-full text-xl px-5"> */}
           <p className="px-5 my-5 pt-5 sm:pt-0">
             I&apos;m a software engineer with a bias towards front-end and
@@ -101,7 +111,7 @@ const AboutMe = (props: Props) => {
             the projects I worked on recently or are under development.
           </p>
           {/* </div> */}
-        </div>
+        </motion.div>
         <div className="flex items-center justify-center col-span-2 row-span-1 rounded-lg bg-accent-orange">
           <div className="font-bold text-3xl md:text-5xl py-4">
             <h1>Skills</h1>
