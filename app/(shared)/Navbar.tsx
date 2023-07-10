@@ -10,7 +10,7 @@ const Navbar = (props: Props) => {
     <header className="mb-5" id="top">
       <nav className="flex justify-between items-center w-full bg-wh-900 text-wh-10 px-10 py-4">
         <div>
-          <p className="font-bold text-xl">Dean Walton</p>
+          <p className="font-bold text-xl">DW</p>
         </div>
         <div className="hidden sm:block">
           <SocialLinks />
@@ -30,13 +30,15 @@ const Navbar = (props: Props) => {
       </nav>
       <div className="sm:flex justify-between gap-8 mt-5 mb-4 mx-10">
         <div className="flex items-center justify-center flex-col basis-2/3 md:mt-3">
-          <h1 className="font-bold text-3xl md:text-5xl">
-            portfolio of the future
+          <p className="sm:w-full text-lg">Hi, I&apos;m</p>
+          <h1 className="font-bold text-2xl md:text-4xl sm:w-full">
+            <span className="sm:text-7xl text-5xl">Dean Walton</span>{" "}
           </h1>
-          <p className="text-sm mt-3 mb-3">
+          <p className="sm:w-full text-lg">Software Engineer</p>
+          {/* <p className="text-sm mt-3 mb-3">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Reprehenderit, voluptatum!
-          </p>
+          </p> */}
         </div>
         <div className="basis-full relative w-auto h-[400px] bg-wh-500">
           {/* <Image  /> */}

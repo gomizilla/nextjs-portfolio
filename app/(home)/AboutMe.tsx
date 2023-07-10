@@ -80,20 +80,20 @@ const AboutMe = (props: Props) => {
         <h1 className="font-bold text-3xl md:text-5xl">About Me</h1>
       </div>
       <div className="sm:grid gap-5 grid-cols-4 grid-rows-4 sm:h-[500px] my-3">
-        <div className="col-span-2 row-span-4 rounded-xl bg-wh-100">
+        <div className="col-span-2 row-span-4 text-xl sm:text-2xl rounded-xl bg-accent-orange">
           {/* <div className="flex justify-evenly items-center flex-col h-full text-xl px-5"> */}
-          <p className="px-5 my-5 text-xl">
-            Hello, I&apos;m Dean. I&apos;m a software engineer with a bias
-            towards front-end and mobile development. My background is in
-            education, hospitality, and aquatic saftey.
+          <p className="px-5 my-5 pt-5 sm:pt-0">
+            I&apos;m a software engineer with a bias towards front-end and
+            mobile development. My background is in education, hospitality, and
+            aquatic saftey.
           </p>
           {/* <br /> */}
-          <p className="px-5 my-5 text-xl">
-            Originally from Oahu, Hawai&apos;i, I now reside in Toyama, Japan
-            and enjoy waking up to see the snowy tops of Mt. Tate.
+          <p className="px-5 my-5">
+            Originally from O&apos;ahu, Hawai&apos;i, I now reside in Toyama,
+            Japan and enjoy waking up to see the snowy tops of Mt. Tate.
           </p>
           {/* <br /> */}
-          <p className="px-5 my-5 text-xl">
+          <p className="px-5 my-5 pb-5 sm:pb-0">
             I have listed some of the technologies I&apos;m familiar with but
             I&apos;m always ready to learn more! I also have showcased some of
             the projects I worked on recently or are under development.
@@ -101,12 +101,12 @@ const AboutMe = (props: Props) => {
           {/* </div> */}
         </div>
         <div className="flex items-center justify-center col-span-2 row-span-1 rounded-lg bg-accent-orange">
-          <div className="font-bold text-3xl md:text-5xl xs:py-2">
+          <div className="font-bold text-3xl md:text-5xl py-4">
             <h1>Skills</h1>
           </div>
         </div>
         <div className="col-span-2 row-span-3">
-          <div className="grid grid-cols-3 grid-rows-4 h-full gap-2">
+          <div className="grid grid-cols-3 grid-rows-4 h-full gap-2 pt-5 sm:pt-0">
             {skillImages.map((img, index) => (
               // <div key={index}>
               <div

@@ -8,12 +8,9 @@ const Footer = () => {
       <div className="justify-between mx-auto gap-16 sm:flex">
         {/* first column */}
         <div className="mt-16 basis-1/2 sm:mt-0">
-          <h4 className="font-bold">portfolio of the foocha</h4>
-          <p className="my-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet,
-            excepturi exercitationem fugiat ullam aliquam obcaecati.
-          </p>
-          <p>© Copyright dood</p>
+          <h4 className="font-bold">Dean&apos;s Portfolio</h4>
+          <p className="my-5">Made with TypeScript, NextJS, and TailwindCSS</p>
+          {/* <p>© Copyright dood</p> */}
         </div>
         {/* second column */}
         <div className="mt-16 basis-1/4 sm:mt-0">

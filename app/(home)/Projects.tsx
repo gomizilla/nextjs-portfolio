@@ -51,20 +51,23 @@ import WordScramble from "/public/assets/project_wordscramble.png";
 
 type Props = {};
 
-type Test = {
-  title?: string;
+type ProjectListProps = {
+  title: string;
   image?: any;
-  description?: string;
+  description: string;
+  techStack?: string;
   mainLink?: string;
   demoLink?: string;
 };
 
-const projectTest: Array<Test> = [
+const projectList: Array<ProjectListProps> = [
   {
     title: "Tango Atsumare",
     image: TangoAtsumare,
     description:
       "Tango Atsumare helps users expand their vocabulary by making the process of creating high quality flashcards easier and more fun than ever before.",
+    techStack:
+      "TypeScript | React Native | NodeJS | ExpressJS | MongoDB | Firebase",
     mainLink: "https://github.com/tangoatsumare/tangoatsumare-readme",
     demoLink: "https://www.youtube.com/watch?v=PSH1h7tCUjM",
   },
@@ -73,6 +76,7 @@ const projectTest: Array<Test> = [
     image: WordScramble,
     description:
       "This project was made for Japanese junior high school students who have a hard time learning English. Through simple gamification, it helps students retain English vocabulary they encounter in school.",
+    techStack: "JavaScript | React | MaterialUI",
     mainLink: "https://github.com/gomizilla/Deans-English-Games",
     demoLink: "https://deans-english-games.vercel.app/",
   },
@@ -80,16 +84,17 @@ const projectTest: Array<Test> = [
     title: "Sneaky Snake",
     image: SneakySnake,
     description: "A simple game made to learn Java.",
+    techStack: "Java",
     mainLink: "https://github.com/gomizilla/Sneaky-Snake",
     demoLink: "https://github.com/gomizilla/Sneaky-Snake",
   },
-  {
-    title: "test4",
-    // image: "test4",
-    description: "test4",
-    mainLink: "",
-    demoLink: "",
-  },
+  // {
+  //   title: "test4",
+  //   // image: "test4",
+  //   description: "test4",
+  //   mainLink: "",
+  //   demoLink: "",
+  // },
 ];
 
 const Projects = (props: Props) => {
@@ -126,9 +131,9 @@ const Projects = (props: Props) => {
 
       {/* <div className="grid grid-cols-2 grid-rows-2 gap-x-8 gap-y-8 my-5 border-2 border-orange-400"> */}
       {/* <div className="flex flex-col gap-y-8 my-5 border-2 border-orange-800"> */}
-      <div className="grid sm:grid-cols-2 sm:grid-rows-2 gap-x-8 gap-y-8 my-5">
+      <div className="grid sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-1 gap-x-8 gap-y-8 my-5">
         {/* large card */}
-        {projectTest.map((project: Test, index) => (
+        {projectList.map((project: ProjectListProps, index) => (
           <Card
             key={`${project.title}-${index}`}
             className="col-span-1 row-span-3"
@@ -140,6 +145,7 @@ const Projects = (props: Props) => {
             mainLink={project.mainLink}
             demoLink={project.demoLink}
             description={project.description}
+            techStack={project.techStack}
           />
         ))}
         {/* <Card

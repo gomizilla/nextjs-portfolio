@@ -7,11 +7,12 @@ type Props = {
   imageHeight: string;
   isSmallCard?: boolean;
   // isLongForm?: boolean;
-  title?: string;
+  title: string;
   image?: any;
   mainLink?: string;
   demoLink?: string;
-  description?: string;
+  techStack?: string;
+  description: string;
 };
 
 const Card = ({
@@ -23,6 +24,7 @@ const Card = ({
   image,
   mainLink,
   demoLink,
+  techStack,
   description,
 }: Props) => {
   return (
@@ -33,7 +35,7 @@ const Card = ({
         target="_blank"
       >
         <div
-          className={`relative w-auto mb-3 ${imageHeight} rounded-lg bg-slate-500`}
+          className={`relative w-auto mb-3 ${imageHeight} rounded-lg bg-slate-500 hover:border-2 hover:border-green-400`}
         >
           <Image
             fill
@@ -59,7 +61,8 @@ const Card = ({
           </h4>
         </Link>
         <div className={`${isSmallCard ? "my-2" : "flex my-3"} gap-3`}>
-          <h5 className="font-semibold text-xs"></h5> {/* 1:43 ish */}
+          <h5 className="font-semibold text-xs">{techStack}</h5>{" "}
+          {/* 1:43 ish */}
         </div>
         <p
           // className={`text-wh-500 ${
