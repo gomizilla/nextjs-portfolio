@@ -9,7 +9,7 @@ type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <section className="mt-10">
+    <section className="mt-10 pb-10">
       <hr className="border-1" />
       <div className="sm:grid grid-cols-2 gap-8 pt-10">
         <div className="col-span-1">
@@ -41,18 +41,17 @@ const Contact = (props: Props) => {
             <h1 className="font-bold text-3xl md:text-5xl">Contacts</h1>
           </div>
           <div className="text-lg">
-            Write me an email at: email@email.com
-            {/* <p> */}
+            Write me an email at:{" "}
+            <a
+              href="mailto:deanwaltondev@gmail.com"
+              className="hover:underline"
+            >
+              deanwaltondev@gmail.com
+            </a>
             <span className="flex justify-start gap-5">
               Or reach me via <SocialLinks />
             </span>
-            {/* </p> */}
           </div>
-          {/* <div className="border-2 border-cyan-300"> */}
-          {/* <div className="basis-3/4 border-2 border-green-500"> */}
-          {/* <SocialLinks isDark /> */}
-          {/* </div> */}
-          {/* </div> */}
         </div>
       </div>
     </section>

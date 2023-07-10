@@ -19,22 +19,20 @@ const Navbar = (props: Props) => {
           <SocialLinks />
         </div>
         <div className="flex justify-between items-center gap-10">
-          {/* <Link href="/">Home</Link> */}
-          <Link className="hover:text-accent-green" href="#about-me">
+          <Link className="hover:text-teal-500 text-lg" href="#about-me">
             About
           </Link>
-          <Link className="hover:text-accent-green" href="#projects">
+          <Link className="hover:text-teal-500 text-lg" href="#projects">
             Projects
           </Link>
-          <Link className="hover:text-accent-green" href="#contacts">
+          <Link className="hover:text-teal-500 text-lg" href="#contacts">
             Contacts
           </Link>
         </div>
       </nav>
       <motion.div className="sm:flex justify-between items-center gap-8 mt-5 mb-4 mx-10">
-        <div className="flex items-center justify-center flex-col basis-full md:mt-3">
+        <div className="flex items-center justify-center flex-col basis-full md:mt-3 py-5">
           <motion.div
-            // className="border-2 border-yellow-500"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -46,17 +44,13 @@ const Navbar = (props: Props) => {
           >
             <p className="sm:w-full text-lg">Hi, I&apos;m</p>
             <h1 className="font-bold text-2xl md:text-4xl sm:w-full">
-              <span className="sm:text-7xl text-5xl">Dean Walton</span>{" "}
+              <span className="sm:text-8xl text-5xl">Dean Walton</span>{" "}
             </h1>
             <p className="sm:w-full text-lg">Software Engineer</p>
           </motion.div>
-          {/* <p className="text-sm mt-3 mb-3">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Reprehenderit, voluptatum!
-          </p> */}
         </div>
         <motion.div
-          className="sm:basis-full relative w-auto h-[400px] rounded-3xl border-8 border-slate-500 bg-wh-500"
+          className="sm:basis-full relative w-auto h-[400px] rounded-3xl"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
