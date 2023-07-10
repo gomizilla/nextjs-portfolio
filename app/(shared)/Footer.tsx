@@ -4,7 +4,10 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-wh-900 text-wh-50 p-10" id="contacts">
+    <footer
+      className="bg-wh-900 text-wh-50 sm:p-10 px-10 pt-2 pb-5"
+      id="contacts"
+    >
       <div className="justify-between mx-auto gap-16 sm:flex">
         {/* first column */}
         <div className="mt-16 basis-1/2 sm:mt-0">

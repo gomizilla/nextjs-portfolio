@@ -41,6 +41,7 @@ const Card = ({
             fill
             alt="temp"
             // placeholder="blur"
+            className="rounded-lg"
             src={image}
             sizes="(max-width: 480px) 100vw,
                 (max-width: 768px) 75vw,
