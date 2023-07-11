@@ -10,3 +10,8 @@ body,
   width: 100%;
   @apply text-sm;
 }
+
+html {
+  scroll-behavior: smooth !important;
+  background-color: #f4f4f4;
+}
