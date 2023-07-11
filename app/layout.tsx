@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "app/(shared)/Navbar";
 import Footer from "app/(shared)/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 import { Open_Sans } from "next/font/google";
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
