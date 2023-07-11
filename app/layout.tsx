@@ -1,5 +1,4 @@
 import "./globals.css";
-// import { Inter } from "next/font/google";
 import Navbar from "app/(shared)/Navbar";
 import Footer from "app/(shared)/Footer";
 
@@ -9,11 +8,9 @@ const openSans = Open_Sans({
   subsets: ["latin"],
 });
 
-// const inter = Inter({ subsets: ["latin"] });
-
 export const metadata = {
-  title: "Dean Walton Portfolio",
-  description: "Dean Walton, software engineering portfolio using Next JS",
+  title: "Dean Walton",
+  description: "Dean Walton, software engineering portfolio. ",
 };
 
 export default function RootLayout({

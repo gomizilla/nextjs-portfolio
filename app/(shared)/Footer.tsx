@@ -12,7 +12,6 @@ const Footer = () => {
         {/* first column */}
         <div className="mt-16 basis-1/2 sm:mt-0 sm:flex items-center justify-center">
           <h4 className="font-bold">Created by Dean Walton</h4>
-          {/* <p className="my-5">Made with TypeScript, NextJS, and TailwindCSS</p> */}
         </div>
         {/* second column */}
         <div className="mt-16 basis-1/4 sm:mt-0">

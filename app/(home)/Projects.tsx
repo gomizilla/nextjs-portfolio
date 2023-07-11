@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import Card from "../(shared)/Card";
 import SneakySnake from "/public/assets/project_sneakysnake.png";
@@ -11,7 +9,7 @@ import { motion } from "framer-motion";
 const container = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.3 },
+    transition: { staggerChildren: 0.4 },
   },
 };
 
