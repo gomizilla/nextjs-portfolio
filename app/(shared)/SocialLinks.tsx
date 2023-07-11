@@ -19,8 +19,8 @@ const SocialLinks = ({ isDark = false }: Props) => {
           className={`${isDark ? "brightness-0" : ""} hover:opacity-50`}
           alt="LinkedIn"
           src={LinkedIn}
-          width={25}
-          height={25}
+          width={32}
+          height={32}
         />
       </a>
       <a href="https://github.com/gomizilla" target="_blank" rel="noreferrer">
@@ -28,8 +28,8 @@ const SocialLinks = ({ isDark = false }: Props) => {
           className={`${isDark ? "brightness-0" : ""} hover:opacity-50`}
           alt="Github"
           src={Github}
-          width={25}
-          height={25}
+          width={32}
+          height={32}
         />
       </a>
     </div>
