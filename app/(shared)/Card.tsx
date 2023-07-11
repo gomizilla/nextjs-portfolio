@@ -11,7 +11,6 @@ const childVariant = {
 type Props = {
   className?: string;
   imageHeight: string;
-  isSmallCard?: boolean;
   title: string;
   image?: any;
   mainLink?: string;
@@ -23,7 +22,6 @@ type Props = {
 const Card = ({
   className,
   imageHeight,
-  isSmallCard = false,
   title,
   image,
   mainLink,
@@ -56,15 +54,9 @@ const Card = ({
       </Link>
       <div className="basis-full">
         <Link href={`${demoLink}`} target="_blank">
-          <h4
-            className={`font-bold hover:text-accent-green
-            ${isSmallCard ? "text-base" : "text-lg"}
-        `}
-          >
-            {title}
-          </h4>
+          <h4 className="font-bold hover:text-teal-500">{title}</h4>
         </Link>
-        <div className={`${isSmallCard ? "my-2" : "flex my-3"} gap-3`}>
+        <div className="flex my-3 gap-3">
           <h5 className="font-semibold text-xs">{techStack}</h5>{" "}
         </div>
         <p className="text-wh-500">{description}</p>

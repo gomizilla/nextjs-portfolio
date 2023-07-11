@@ -15,7 +15,12 @@ import GithubImage from "/public/assets/skills_github.svg";
 import PostgreSQLImage from "/public/assets/skills_postgresql.svg";
 import { motion } from "framer-motion";
 
-const skillImages = [
+type SkillImageType = {
+  name: string;
+  image: string;
+};
+
+const skillImages: Array<SkillImageType> = [
   {
     name: "Javascript",
     image: JSImage,
@@ -66,9 +71,7 @@ const skillImages = [
   },
 ];
 
-type Props = {};
-
-const AboutMe = (props: Props) => {
+const AboutMe = () => {
   return (
     <section className="pt-3 pb-10 " id="about-me">
       <div className="flex items-center gap-3">

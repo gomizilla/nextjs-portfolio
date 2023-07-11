@@ -5,9 +5,7 @@ import Image from "next/image";
 import NorthShoreBeach from "public/assets/extra_beach.jpg";
 import { motion } from "framer-motion";
 
-type Props = {};
-
-const Contact = (props: Props) => {
+const Contact = () => {
   return (
     <section className="mt-10 pb-10">
       <hr className="border-1" />

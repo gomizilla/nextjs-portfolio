@@ -7,9 +7,7 @@ import { motion } from "framer-motion";
 import SelfPicture from "public/assets/dean_pic_full.jpg";
 import NavbarIcon from "public/assets/dean_navicon.png";
 
-type Props = {};
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
   return (
     <header className="mb-5" id="top">
       <nav className="flex justify-between items-center w-full bg-wh-900 text-wh-10 px-10 py-4">

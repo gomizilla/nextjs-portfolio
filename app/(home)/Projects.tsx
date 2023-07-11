@@ -13,8 +13,6 @@ const container = {
   },
 };
 
-type Props = {};
-
 type ProjectListProps = {
   title: string;
   image?: any;
@@ -54,7 +52,7 @@ const projectList: Array<ProjectListProps> = [
   },
 ];
 
-const Projects = (props: Props) => {
+const Projects = () => {
   return (
     <section id="projects">
       <hr className="border-1" />
