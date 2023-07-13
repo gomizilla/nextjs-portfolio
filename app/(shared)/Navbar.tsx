@@ -10,7 +10,7 @@ import NavbarIcon from "public/assets/dean_navicon.png";
 const Navbar = () => {
   return (
     <header className="mb-5" id="top">
-      <nav className="flex justify-between items-center w-full bg-wh-900 text-wh-10 px-10 py-4">
+      <nav className="flex justify-between items-center w-full bg-wh-900 text-wh-10 px-10 py-4 fixed z-10 top-0">
         <div>
           <p className="font-bold text-xl">
             <Image alt="Initials DW" src={NavbarIcon} height={32} width={32} />
@@ -31,7 +31,7 @@ const Navbar = () => {
           </Link>
         </div>
       </nav>
-      <motion.div className="sm:flex justify-between items-center gap-8 mt-5 mb-4 mx-10">
+      <motion.div className="sm:flex justify-between items-center gap-8 mt-5 mb-4 mx-10 pt-20">
         <div className="flex items-center justify-center flex-col basis-3/5 md:mt-3 py-5">
           <motion.div
             initial="hidden"
