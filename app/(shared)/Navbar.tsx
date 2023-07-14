@@ -13,7 +13,15 @@ const Navbar = () => {
       <nav className="flex justify-between items-center w-full bg-wh-900 text-wh-10 px-10 py-4 fixed z-10 top-0">
         <div>
           <p className="font-bold text-xl">
-            <Image alt="Initials DW" src={NavbarIcon} height={32} width={32} />
+            <Link href="#top">
+              <Image
+                className="hover:opacity-50"
+                alt="Initials DW"
+                src={NavbarIcon}
+                height={32}
+                width={32}
+              />
+            </Link>
           </p>
         </div>
         <div className="hidden sm:block">
