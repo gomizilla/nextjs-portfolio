@@ -56,7 +56,7 @@ const Projects = () => {
   return (
     <section id="projects">
       <hr className="border-1" />
-      <div className="flex items-center gap-3 my-8">
+      <div className="flex items-center gap-3 my-8 sm:pt-10 pt-8">
         <h1 className="font-bold text-3xl md:text-5xl">Projects</h1>
       </div>
       <motion.div

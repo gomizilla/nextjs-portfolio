@@ -73,7 +73,7 @@ const skillImages: Array<SkillImageType> = [
 
 const AboutMe = () => {
   return (
-    <section className="pt-3 pb-10 " id="about-me">
+    <section className="pt-20 pb-16" id="about-me">
       <div className="flex items-center gap-3">
         <h1 className="font-bold text-3xl md:text-5xl">About Me</h1>
       </div>

@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer
       className="bg-wh-900 text-wh-50 sm:p-10 px-10 pt-2 pb-5"
-      id="contacts"
+      // id="contacts"
     >
       <div className="justify-between mx-auto gap-16 sm:flex">
         {/* first column */}
@@ -36,11 +36,8 @@ const Footer = () => {
         <div className="mt-16 basis-1/4 sm:mt-0">
           <h4 className="font-bold">Contact</h4>
           <p className="my-5">
-            <a
-              href="mailto:deanwaltondev@gmail.com"
-              className="hover:underline"
-            >
-              deanwaltondev@gmail.com
+            <a href="mailto:contact@deanwalton.dev" className="hover:underline">
+              contact@deanwalton.dev
             </a>
           </p>
           <div className="flex justify-start">
