@@ -7,12 +7,12 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section className="mt-10 pb-10">
+    <section className="mt-10 pb-10" id="contacts">
       <hr className="border-1" />
       <div className="sm:grid grid-cols-2 gap-8 pt-10">
         <div className="col-span-1">
           <motion.div
-            className="basis-full relative w-auto h-96 bg-wh-500"
+            className="basis-full relative w-auto h-96 mt-10"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -31,6 +31,7 @@ const Contact = () => {
               (max-width: 1060px) 50vw,
               33vw"
               style={{ objectFit: "cover" }}
+              className="rounded-2xl"
             />
           </motion.div>
         </div>
@@ -40,11 +41,8 @@ const Contact = () => {
           </div>
           <div className="text-lg">
             Write me an email at:{" "}
-            <a
-              href="mailto:deanwaltondev@gmail.com"
-              className="hover:underline"
-            >
-              deanwaltondev@gmail.com
+            <a href="mailto:contact@deanwalton.dev" className="hover:underline">
+              contact@deanwalton.dev
             </a>
             <span className="flex justify-start gap-5">
               Or reach me via <SocialLinks />
