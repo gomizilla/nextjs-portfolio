@@ -55,12 +55,12 @@ const Card = ({
       </Link>
       <div className="basis-full">
         <Link href={`${demoLink}`} target="_blank">
-          <h4 className="font-bold hover:text-teal-500">{title}</h4>
+          <h4 className="font-bold text-2xl hover:text-teal-500">{title}</h4>
         </Link>
         <div className="flex my-3 gap-3">
-          <h5 className="font-semibold text-xs">{techStack}</h5>{" "}
+          <h5 className="font-semibold">{techStack}</h5>{" "}
         </div>
-        <p className="text-wh-500">{description}</p>
+        <p className="text-wh-500 text-lg">{description}</p>
       </div>
     </motion.div>
   );

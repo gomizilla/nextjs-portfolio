@@ -51,7 +51,7 @@ const Navbar = () => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <p className="sm:w-full text-lg">Hi, I&apos;m</p>
+            <p className="sm:w-full sm:text-3xl text-lg">Hi, I&apos;m</p>
             <h1 className="font-bold text-2xl md:text-4xl sm:w-full">
               <span className="sm:text-7xl md:text-8xl text-5xl">
                 Dean Walton
