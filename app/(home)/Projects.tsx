@@ -4,6 +4,7 @@ import Card from "../(shared)/Card";
 import SneakySnake from "/public/assets/project_sneakysnake.png";
 import TangoAtsumare from "/public/assets/project_tangoatsumare.webp";
 import WordScramble from "/public/assets/project_wordscramble.png";
+import ToyamaZon from "/public/assets/project_ToyamaZon.png";
 import { motion } from "framer-motion";
 
 const container = {
@@ -24,13 +25,22 @@ type ProjectListProps = {
 
 const projectList: Array<ProjectListProps> = [
   {
+    title: "ToyamaZon",
+    image: ToyamaZon,
+    description:
+      "A basic ecommerce web app that allows users (anonymous and logged in with Google) to add/remove products from their shopping cart.",
+    techStack: "Next.js | TypeScript | Prisma | MongoDB",
+    mainLink: "https://ecommerce-eight-weld.vercel.app/",
+    demoLink: "https://github.com/gomizilla/ecommerce",
+  },
+  {
     title: "Dean's English Games",
     image: WordScramble,
     description:
       "This project was made for Japanese junior high school students who have a hard time learning English. Through simple gamification, it helps students retain English vocabulary they encounter in school.",
     techStack: "JavaScript | React | MaterialUI",
-    mainLink: "https://github.com/gomizilla/Deans-English-Games",
-    demoLink: "https://deans-english-games.vercel.app/",
+    mainLink: "https://deans-english-games.vercel.app/",
+    demoLink: "https://github.com/gomizilla/Deans-English-Games",
   },
   {
     title: "Tango Atsumare",
@@ -39,8 +49,8 @@ const projectList: Array<ProjectListProps> = [
       "Tango Atsumare helps users expand their vocabulary by making the process of creating high quality flashcards easier and more fun than ever before.",
     techStack:
       "TypeScript | React Native | NodeJS | ExpressJS | MongoDB | Firebase",
-    mainLink: "https://github.com/tangoatsumare/tangoatsumare-readme",
-    demoLink: "https://www.youtube.com/watch?v=PSH1h7tCUjM",
+    mainLink: "https://www.youtube.com/watch?v=PSH1h7tCUjM",
+    demoLink: "https://github.com/tangoatsumare/tangoatsumare-readme",
   },
   {
     title: "Sneaky Snake",

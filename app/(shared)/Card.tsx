@@ -31,14 +31,15 @@ const Card = ({
 }: Props) => {
   return (
     <motion.div className={className} variants={childVariant}>
-      <Link
-        className="basis-full hover:opacity-70"
-        href={`${mainLink}`}
-        target="_blank"
-      >
+      <Link className="basis-full" href={`${mainLink}`} target="_blank">
         <div
           className={`relative w-auto mb-3 ${imageHeight} rounded-lg bg-slate-500 hover:border-4 hover:border-teal-500`}
         >
+          <span className="absolute z-10 w-full h-full">
+            <span className="flex justify-center items-center w-full h-full text-transparent hover:text-black hover:bg-opacity-50 hover:bg-slate-100 text-4xl font-bold">
+              View Demo
+            </span>
+          </span>
           <Image
             fill
             alt="temp"
